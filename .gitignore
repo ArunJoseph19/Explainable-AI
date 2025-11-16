@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Model Weights & Cache
+*.safetensors
+*.ckpt
+*.pth
+*.bin
+*.onnx
+models/
+checkpoints/
+huggingface_cache/
+
+# Outputs
+outputs/*/
+!outputs/.gitkeep
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# Temporary Files
+temp/
+tmp/
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Gradio
+gradio_cached_examples/
+flagged/
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+
+# Binaries
+ngrok
+ngrok*
+
+# Lost+Found
+lost+found/
