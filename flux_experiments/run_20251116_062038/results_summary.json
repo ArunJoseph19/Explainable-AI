@@ -1,0 +1,28 @@
+{
+  "giftbag_design": {
+    "prompt_0_base": {
+      "prompt": "convert logo to christmas gift bag design with wrapping elements",
+      "output_dir": "flux_experiments/run_20251116_062038/giftbag_design/prompt_0_base",
+      "generation_time": 389.1910660266876,
+      "final_image": "flux_experiments/run_20251116_062038/giftbag_design/prompt_0_base/final_output.png"
+    },
+    "prompt_1_variant1": {
+      "prompt": "create holiday gift wrap pattern with bows and ornaments",
+      "output_dir": "flux_experiments/run_20251116_062038/giftbag_design/prompt_1_variant1",
+      "generation_time": 390.9165930747986,
+      "final_image": "flux_experiments/run_20251116_062038/giftbag_design/prompt_1_variant1/final_output.png"
+    },
+    "prompt_2_variant2": {
+      "prompt": "design festive packaging graphics with presents and ribbons",
+      "output_dir": "flux_experiments/run_20251116_062038/giftbag_design/prompt_2_variant2",
+      "generation_time": 372.28106474876404,
+      "final_image": "flux_experiments/run_20251116_062038/giftbag_design/prompt_2_variant2/final_output.png"
+    },
+    "prompt_3_variant3": {
+      "prompt": "transform into christmas gift bag artwork with winter scenes",
+      "output_dir": "flux_experiments/run_20251116_062038/giftbag_design/prompt_3_variant3",
+      "generation_time": 371.73967361450195,
+      "final_image": "flux_experiments/run_20251116_062038/giftbag_design/prompt_3_variant3/final_output.png"
+    }
+  }
+}

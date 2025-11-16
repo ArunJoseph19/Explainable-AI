@@ -1,0 +1,9 @@
+{
+  "prompt": "transform logo into festive holiday mug design with snowflakes",
+  "model_type": "diffusers",
+  "num_steps": 28,
+  "guidance_scale": 3.5,
+  "generation_time_seconds": 384.09949231147766,
+  "snapshots_saved": 4,
+  "timestamp": "2025-11-15T23:48:54.647995"
+}

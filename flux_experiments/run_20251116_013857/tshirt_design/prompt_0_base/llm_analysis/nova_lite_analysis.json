@@ -1,0 +1,11 @@
+{
+  "llm": "nova_lite",
+  "model_id": "us.amazon.nova-lite-v1:0",
+  "prompt": "adapt logo for holiday t-shirt print with seasonal elements",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: HTTP 500 - {\"error\": \"Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: Input Tokens Exceeded: Number of input tokens exceeds maximum length. Please update the input to try again.\"}",
+  "response_time_seconds": 2.6971688270568848,
+  "response_length": 233,
+  "images_analyzed": 5,
+  "timestamp": 1763276717.535216
+}

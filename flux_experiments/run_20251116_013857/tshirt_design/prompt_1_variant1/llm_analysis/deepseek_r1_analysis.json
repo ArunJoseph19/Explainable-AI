@@ -1,0 +1,11 @@
+{
+  "llm": "deepseek_r1",
+  "model_id": "us.deepseek.r1-v1:0",
+  "prompt": "create christmas apparel design with vintage holiday motifs",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: 413 Client Error: Request Entity Too Large for url: https://ctwa92wg1b.execute-api.us-east-1.amazonaws.com/prod/invoke",
+  "response_time_seconds": 0.1598660945892334,
+  "response_length": 125,
+  "images_analyzed": 5,
+  "timestamp": 1763275524.0966852
+}

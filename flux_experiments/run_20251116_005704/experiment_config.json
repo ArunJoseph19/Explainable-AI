@@ -1,0 +1,32 @@
+{
+  "scenarios": {
+    "mug_design": {
+      "base_prompt": "transform logo into festive holiday mug design with snowflakes",
+      "variants": [
+        "add christmas-themed mug design with candy canes and holly",
+        "create winter coffee cup graphics with red and green accents",
+        "design festive drinkware pattern with ornaments and ribbons"
+      ]
+    },
+    "tshirt_design": {
+      "base_prompt": "adapt logo for holiday t-shirt print with seasonal elements",
+      "variants": [
+        "create christmas apparel design with vintage holiday motifs",
+        "transform into festive clothing graphic with snowflakes and stars",
+        "design holiday wearable print with cozy winter theme"
+      ]
+    },
+    "giftbag_design": {
+      "base_prompt": "convert logo to christmas gift bag design with wrapping elements",
+      "variants": [
+        "create holiday gift wrap pattern with bows and ornaments",
+        "design festive packaging graphics with presents and ribbons",
+        "transform into christmas gift bag artwork with winter scenes"
+      ]
+    }
+  },
+  "input_image": "holistic.png",
+  "inference_steps": 28,
+  "guidance_scale": 3.5,
+  "timestamp": "20251116_005704"
+}

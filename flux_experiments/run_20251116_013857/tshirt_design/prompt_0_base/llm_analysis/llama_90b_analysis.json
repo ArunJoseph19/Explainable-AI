@@ -1,0 +1,11 @@
+{
+  "llm": "llama_90b",
+  "model_id": "us.meta.llama3-2-90b-instruct-v1:0",
+  "prompt": "adapt logo for holiday t-shirt print with seasonal elements",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: HTTP 500 - {\"error\": \"Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: This model's maximum context length is 131072 tokens. Please reduce the length of the prompt\"}",
+  "response_time_seconds": 1.3212223052978516,
+  "response_length": 218,
+  "images_analyzed": 5,
+  "timestamp": 1763276719.3581054
+}

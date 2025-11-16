@@ -1,0 +1,11 @@
+{
+  "llm": "nova_premier",
+  "model_id": "us.amazon.nova-premier-v1:0",
+  "prompt": "design holiday wearable print with cozy winter theme",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: 413 Client Error: Request Entity Too Large for url: https://ctwa92wg1b.execute-api.us-east-1.amazonaws.com/prod/invoke",
+  "response_time_seconds": 0.1568608283996582,
+  "response_length": 125,
+  "images_analyzed": 5,
+  "timestamp": 1763275534.6369228
+}

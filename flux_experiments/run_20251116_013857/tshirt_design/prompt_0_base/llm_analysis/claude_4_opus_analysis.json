@@ -1,0 +1,12 @@
+{
+  "llm": "claude_4_opus",
+  "model_id": "us.anthropic.claude-opus-4-20250514-v1:0",
+  "prompt": "adapt logo for holiday t-shirt print with seasonal elements",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: HTTP 504 - {\"message\": \"Endpoint request timed out\"}",
+  "scores": null,
+  "response_time_seconds": 29.538853406906128,
+  "response_length": 59,
+  "images_analyzed": 13,
+  "timestamp": 1763278164.078695
+}

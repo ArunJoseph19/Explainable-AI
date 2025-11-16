@@ -1,0 +1,11 @@
+{
+  "llm": "mistral_large",
+  "model_id": "us.mistral.pixtral-large-2502-v1:0",
+  "prompt": "adapt logo for holiday t-shirt print with seasonal elements",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: HTTP 500 - {\"error\": \"Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: Prompt contains 369664 tokens and 0 draft tokens, too large for model with 131072 maximum context length\"}",
+  "response_time_seconds": 1.2577521800994873,
+  "response_length": 230,
+  "images_analyzed": 5,
+  "timestamp": 1763276723.063873
+}

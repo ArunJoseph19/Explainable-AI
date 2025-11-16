@@ -1,0 +1,11 @@
+{
+  "llm": "llama_90b",
+  "model_id": "us.meta.llama3-2-90b-instruct-v1:0",
+  "prompt": "create christmas apparel design with vintage holiday motifs",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: 413 Client Error: Request Entity Too Large for url: https://ctwa92wg1b.execute-api.us-east-1.amazonaws.com/prod/invoke",
+  "response_time_seconds": 0.14019322395324707,
+  "response_length": 125,
+  "images_analyzed": 5,
+  "timestamp": 1763275520.7903666
+}

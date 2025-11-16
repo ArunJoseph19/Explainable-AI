@@ -1,0 +1,11 @@
+{
+  "llm": "mistral_large",
+  "model_id": "us.mistral.pixtral-large-2502-v1:0",
+  "prompt": "design holiday wearable print with cozy winter theme",
+  "scenario": "tshirt design",
+  "analysis": "ERROR: 413 Client Error: Request Entity Too Large for url: https://ctwa92wg1b.execute-api.us-east-1.amazonaws.com/prod/invoke",
+  "response_time_seconds": 0.16684842109680176,
+  "response_length": 125,
+  "images_analyzed": 5,
+  "timestamp": 1763275538.5853858
+}
