@@ -1,20 +1,64 @@
-# 🎨 Explainable AI: FLUX.1-Kontext Image Generation & Analysis
+# 🎨 GenAI & Explainer: FLUX.1-Kontext Diffusion Model Transparency
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Great Agent Hack 2025](https://img.shields.io/badge/Great%20Agent%20Hack-2025-blue)](https://hackathon.holisticai.com/)
 
-A comprehensive framework for explainable AI-powered image generation using FLUX.1-Kontext. This project provides interactive dashboards for generating, analyzing, and understanding how diffusion models transform images, with built-in word attribution analysis and LLM-powered insights.
+**Co-hosted by Holistic AI and University College London**
 
-## 🌟 Features
+A comprehensive explainability framework for AI-powered image generation using FLUX.1-Kontext diffusion models. Companies use creative merchandise to strengthen brand identity and engage audiences, but diffusion models can feel unpredictable. This project tackles that by combining an LLM agent with visual explainability tools to provide **full image-generation transparency**. It explains how text and image guidance influence diffusion steps and shows users how to adjust inputs to achieve stable, accurate, and brand-consistent results.
 
-- **🤖 AI-Powered Prompt Generation**: Automatically generate structured prompts from images using LangChain agents with safety filtering
-- **🎨 FLUX.1-Kontext Integration**: Generate high-quality image variations for multiple scenarios (mugs, t-shirts, gift bags)
-- **🔬 Word Attribution Analysis**: Visualize the impact of individual prompt words on generated images through ablation studies
-- **📊 Interactive Dashboards**: 
-  - Generator Dashboard: Create new images with real-time progress tracking
+### The Problem
+
+Diffusion models generate images by reversing a forward noising process, but how they select, refine, and blend subject elements often remains unclear. This makes controlled prompt design difficult and can lead to unpredictable outputs, especially when trying to maintain brand consistency across merchandise designs.
+
+## 🚀 Quick Start
+
+### Use Cases
+
+Perfect for creating brand-consistent merchandise:
+- **🎅 Holiday Mug Designs**: Transform logos into festive coffee cup graphics
+- **👕 T-Shirt Graphics**: Adapt brand identity for apparel with seasonal themes
+- **🎁 Gift Bag Artwork**: Create holiday packaging designs with wrapping elements
+
+### Our Solution: The GREAT AGENT Workflow
+
+Our agent tackles this by combining an LLM agent with visual explainability tools:
+
+1. **👤 User Input**: Provide text prompts and/or images (e.g., company logo)
+2. **📝 Structured Prompt Generation**: LLM agent creates detailed, compliant prompts with safety checks (profanity filter, LLM safety evaluation)
+3. **🤖 Explainer Pipeline**: Transparent analysis of the diffusion process
+4. **✨ Final Output**: Brand-consistent merchandise designs with full transparency
+
+### Core Capabilities
+
+- **🛡️ LLM Safety Detector**: Multi-layer content moderation
+  - Keyword filtering blocks profanity and inappropriate content
+  - LLM safety check evaluates prompts against policy categories
+  - Structured output validation ensures compliant results
+
+- **🎨 Image Generation with Transparency**
+  - **Step-by-Step Denoising**: Visualize how diffusion models reverse the forward noising process
+  - **Cross-Attention Maps**: See how the model understands the prompt and which parts influence the emerging image
+  - **Word Ablation Analysis**: Measure each keyword's influence by removing words individually and regenerating
+
+- **🔬 Visual Explainability Tools**
+  - Real-time diffusion process visualization (every 7 steps)
+  - Cross-attention heatmaps showing prompt understanding
+  - Word attribution through ablation studies
+  - Evolution grids showing complete generation timeline
+
+- **📊 Interactive Analysis Dashboards**
+  - Generator Dashboard: Create images with live progress tracking
   - Analysis Dashboard: Review results, evolution timelines, and word impact rankings
-- **🧠 LLM Analysis**: Get AI-powered feedback on generated images with suggestions for prompt improvements
-- **⏱️ Diffusion Process Visualization**: Watch the step-by-step evolution of image generation
+  - LLM-powered feedback with improvement suggestions
+
+- **🧠 AI-Powered Insights**
+  - Automated prompt adherence analysis
+  - Logo preservation assessment
+  - Design quality evaluation
+  - Word effectiveness scoring
+  - Actionable improvement recommendations
 
 ## 📁 Project Structure
 
@@ -52,7 +96,41 @@ Explainable-AI/
 └── README.md               # This file
 ```
 
-## 🚀 Quick Start
+## 🎯 How It Works: Diffusion Model with Text & Image Conditioning
+
+### Forward Diffusion (Training)
+FLUX.1-Kontext learns to predict noise $\mu_t$ at each timestep by understanding both text and image conditions:
+
+```
+x_t → predict noise μ_t → x_{t-1}
+```
+
+### Reverse Diffusion (Generation)
+Starting from noise, the model iteratively denoises using:
+
+**Text Conditioning (Approach A)**:
+- Encoding via Concatenation
+- Text embeddings inject semantic meaning into each channel
+- Example: "add a Christmas hat"
+
+**Image Conditioning (ControlNet/Adapter)**:
+- Control Net or Adapter modules guide spatial layout
+- Preserves structure while allowing creative transformation
+- Example: Maintains logo shape while applying festive theme
+
+### Our Explainability Pipeline
+
+1. **Conditional Reverse Step**: At each timestep, we capture:
+   - Current latent state $x_t$
+   - Predicted noise $\mu_t$
+   - Cross-attention weights
+
+2. **Visual Decoding**: Every 7 steps, we decode latents into visible images
+
+3. **Analysis**:
+   - **Evolution Grids**: Show the complete generation timeline
+   - **Cross-Attention Maps**: Reveal which prompt words guide which image regions
+   - **Word Ablation**: Empirically measure each word's contribution
 
 ### Prerequisites
 
@@ -162,12 +240,28 @@ The system automatically generates:
 
 ## 🔬 Key Technologies
 
-- **FLUX.1-Kontext-dev**: State-of-the-art image generation model
-- **LangChain**: Agent orchestration and prompt engineering
-- **Gradio**: Interactive web interfaces
-- **AWS Bedrock**: Claude LLM access (via Holistic AI)
-- **Diffusers**: Hugging Face diffusion model library
-- **PyTorch**: Deep learning framework
+### Core Framework
+- **FLUX.1-Kontext-dev**: State-of-the-art diffusion model with text and image conditioning
+- **U-Net Architecture**: Forward and reverse diffusion with cross-attention layers
+- **LangChain Agents**: Structured prompt generation with tool orchestration
+- **Gradio**: Interactive web interfaces for generation and analysis
+
+### AI & ML Stack
+- **AWS Bedrock**: Claude LLM access (via Holistic AI partnership)
+- **Diffusers**: Hugging Face diffusion model library with custom callbacks
+- **PyTorch**: Deep learning framework with bfloat16 optimization
+- **Valyu AI**: Web search tool integration for agent context
+
+### Analysis & Visualization
+- **Cross-Attention Analysis**: Extract and visualize attention maps at each transformer layer
+- **VAE Decoding**: Convert latents to images at intermediate timesteps
+- **Ablation Framework**: Automated word removal and regeneration pipeline
+- **Matplotlib**: High-quality visualization of evolution grids and heatmaps
+
+### Safety & Compliance
+- **Better Profanity**: Keyword-based content filtering
+- **LLM Safety Evaluation**: Multi-category policy checking (violence, explicit content, hate speech, illegal activities, self-harm)
+- **Pydantic**: Structured output validation with type safety
 
 ## 📊 Experiment Output Structure
 
@@ -202,10 +296,34 @@ Explore the `notebooks/` directory for:
 
 ## 🔒 Safety Features
 
-The system includes multi-layer content moderation:
-1. **Keyword Filtering**: Blocks profanity and inappropriate content
-2. **LLM Safety Check**: Claude evaluates prompts for safety concerns
-3. **Structured Output Validation**: Ensures well-formed, safe prompts
+Our multi-layer safety system ensures compliant and appropriate outputs:
+
+### Layer 1: Keyword Filtering
+- **Better Profanity** library with comprehensive wordlist
+- Real-time input validation before processing
+- Deterministic guardrail blocks banned content immediately
+
+### Layer 2: LLM Safety Check
+Claude evaluates prompts against **5 Safety Policy Categories**:
+
+1. **Violence & Gore**: Descriptions of extreme violence, weapons, combat, torture
+2. **Explicit & Sexual Content**: Nudity, sexual acts, fetishes, suggestive imagery
+3. **Hate Speech & Discrimination**: Discriminatory symbols, stereotypes, targeted insults
+4. **Illegal Activities**: Drug use, gambling, terrorism, theft, illegal acts
+5. **Self-Harm**: Suicide, self-injury, glorification of mental distress
+
+### Layer 3: Structured Output Validation
+- **JSON Schema Validation**: Ensures prompt structure correctness
+- **Pydantic Type Safety**: Enforces data types and required fields
+- **Safety Flag**: Binary safe/unsafe boolean in every response
+
+### Workflow Integration
+```
+User Input → Keyword Filter → LLM Safety Check → Validation → Generation
+            ❌ Block          ❌ Block           ❌ Block      ✅ Safe
+```
+
+All unsafe content is blocked **before** reaching the diffusion model, ensuring no computational resources are wasted on policy-violating requests.
 
 ## 🤝 Contributing
 
@@ -222,16 +340,35 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- **Black Forest Labs** for FLUX.1-Kontext-dev
-- **Anthropic** for Claude models
-- **Holistic AI** for Bedrock API access
-- **Hugging Face** for model hosting and diffusers library
+### Hackathon
+- **Great Agent Hack 2025** - Co-hosted by Holistic AI and University College London
+- **Holistic AI** for AWS Bedrock API access and technical support
+
+### Technology Partners
+- **Black Forest Labs** for FLUX.1-Kontext-dev diffusion model
+- **Anthropic** for Claude LLMs with vision capabilities
+- **Hugging Face** for model hosting, diffusers library, and community
+- **NVIDIA** for GPU optimization and CUDA support
+- **AWS** for Bedrock infrastructure
+- **FGIM, Valyu** for tool integrations
+
+### Team
+**Arun Josephraj, Chenyi Huang, Victor Hu**
+
+Project developed during the Great Agent Hack 2025 hackathon.
 
 ## 📧 Contact
 
-**Arun Joseph**
-- GitHub: [@ArunJoseph19](https://github.com/ArunJoseph19)
-- Repository: [Explainable-AI](https://github.com/ArunJoseph19/Explainable-AI)
+**Team Members:**
+- **Arun Josephraj** - [@ArunJoseph19](https://github.com/ArunJoseph19)
+- **Chenyi Huang**
+- **Victor Hu**
+
+**Repository**: [Explainable-AI](https://github.com/ArunJoseph19/Explainable-AI)
+
+**Hackathon**: [Great Agent Hack 2025](https://hackathon.holisticai.com/)
+
+For questions, issues, or collaboration opportunities, please open a GitHub issue or reach out via the hackathon platform.
 
 ## 🐛 Troubleshooting
 
@@ -258,14 +395,33 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🗺️ Roadmap
 
-- [ ] Add support for more image formats
-- [ ] Implement batch processing
-- [ ] Add video generation capabilities
-- [ ] Create REST API documentation
-- [ ] Add Docker deployment
-- [ ] Implement user authentication
-- [ ] Add prompt library/templates
+### Explainability Enhancements
+- [ ] Layer-wise attention visualization
+- [ ] Token-level attribution heatmaps
+- [ ] Comparative analysis across multiple models
+- [ ] Interactive attention map exploration
+
+### Feature Additions
+- [ ] Batch processing for multiple images
+- [ ] Custom scenario templates beyond merchandise
+- [ ] Video generation with temporal coherence
+- [ ] API endpoints for programmatic access
+- [ ] Fine-tuning capabilities for brand-specific styles
+
+### Infrastructure
+- [ ] Docker containerization for easy deployment
+- [ ] Cloud deployment (AWS/GCP) templates
+- [ ] Optimization for consumer GPUs
+- [ ] Web-based demo without local installation
+
+### Research Extensions
+- [ ] Quantitative metrics for prompt adherence
+- [ ] User study framework for explainability effectiveness
+- [ ] Comparison with other diffusion models (Stable Diffusion, Midjourney)
+- [ ] Academic paper documenting methodology
 
 ---
+
+**Developed for Great Agent Hack 2025 🏆**
 
 **Star ⭐ this repository if you find it useful!**
