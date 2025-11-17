@@ -1,13 +1,19 @@
-<div align="center">
-  <img src="assets/logo_christmas.png" alt="Holiday Logo" width="180" />
-  <h1>🎨 GenAI & Explainer: FLUX.1-Kontext Diffusion Model Transparency</h1>
-  <p>
-    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python"></a>
-    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
-    <a href="https://hackathon.holisticai.com/"><img src="https://img.shields.io/badge/Great%20Agent%20Hack-2025-blue" alt="Hackathon Badge"></a>
-  </p>
-  <h3>🥉 3rd Place – Agent Glass Box Track (Great Agent Hack 2025)</h3>
-  <p><em>Co-hosted by Holistic AI and University College London • Nov 15–16, 2025 • UCL East Campus, London</em></p>
+<div style="display:flex; align-items:flex-start; justify-content:space-between;">
+  <div style="flex:1;">
+    <h1>GenAI & Explainer: FLUX.1-Kontext Diffusion Model Transparency <img src="assets/logo_christmas.png" alt="Project Logo" width="110" style="vertical-align:middle; margin-left:8px;"/></h1>
+    <p>
+      <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python"></a>
+      <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
+      <a href="https://hackathon.holisticai.com/"><img src="https://img.shields.io/badge/Great%20Agent%20Hack-2025-blue" alt="Hackathon Badge"></a>
+    </p>
+    <h3>🥉 3rd Place – Agent Glass Box Track (Great Agent Hack 2025)</h3>
+    <p><em>Co-hosted by Holistic AI and University College London • Nov 15–16, 2025 • UCL East Campus, London</em></p>
+  </div>
+</div>
+
+<div align="center" style="margin:18px 0 28px;">
+  <img src="assets/hackathon_poster.png" alt="Great Agent Hack 2025 Poster – workflow, transparency pipeline, safety detector, word attribution, showcase" width="760" />
+  <p><em>Official Poster: End-to-end transparency for diffusion-based brand-aware generation.</em></p>
 </div>
 
 ---
@@ -75,13 +81,6 @@ Our agent tackles this by combining an LLM agent with visual explainability tool
   - Actionable improvement recommendations
 
 ## 📁 Project Structure
-## 🖼️ Hackathon Poster
-<div align="center">
-  <img src="assets/hackathon_poster.png" alt="Great Agent Hack 2025 Poster" width="820" />
-  <p><em>Official project poster summarizing workflow, diffusion transparency pipeline, safety layers, and showcase results.</em></p>
-</div>
-
----
 
 ```
 Explainable-AI/
