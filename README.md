@@ -1,16 +1,30 @@
-# 🎨 GenAI & Explainer: FLUX.1-Kontext Diffusion Model Transparency
+<div align="center">
+  <img src="assets/logo_christmas.png" alt="Holiday Logo" width="180" />
+  <h1>🎨 GenAI & Explainer: FLUX.1-Kontext Diffusion Model Transparency</h1>
+  <p>
+    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python"></a>
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
+    <a href="https://hackathon.holisticai.com/"><img src="https://img.shields.io/badge/Great%20Agent%20Hack-2025-blue" alt="Hackathon Badge"></a>
+  </p>
+  <h3>🥉 3rd Place – Agent Glass Box Track (Great Agent Hack 2025)</h3>
+  <p><em>Co-hosted by Holistic AI and University College London • Nov 15–16, 2025 • UCL East Campus, London</em></p>
+</div>
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Great Agent Hack 2025](https://img.shields.io/badge/Great%20Agent%20Hack-2025-blue)](https://hackathon.holisticai.com/)
+---
 
-**Co-hosted by Holistic AI and University College London**
-
-A comprehensive explainability framework for AI-powered image generation using FLUX.1-Kontext diffusion models. Companies use creative merchandise to strengthen brand identity and engage audiences, but diffusion models can feel unpredictable. This project tackles that by combining an LLM agent with visual explainability tools to provide **full image-generation transparency**. It explains how text and image guidance influence diffusion steps and shows users how to adjust inputs to achieve stable, accurate, and brand-consistent results.
+Companies use creative merchandise to strengthen brand identity and engage audiences, yet diffusion models can feel unpredictable—how they detect the main subject, keep it stable, or react to guidance is often unclear. This project combines an LLM agent with visual explainability tooling to provide **full image-generation transparency**. It exposes intermediate diffusion states, word-level influence, and safety validation so users can iteratively refine structured prompts for brand-consistent outputs.
 
 ### The Problem
+Diffusion models reverse a forward noising process, but the internal trajectory (which words influence which pixels, when logo fidelity stabilizes, why colors shift) is rarely exposed. Lack of transparency makes controlled design and safe deployment harder—especially for regulated, branded, or seasonal merchandise generation.
 
-Diffusion models generate images by reversing a forward noising process, but how they select, refine, and blend subject elements often remains unclear. This makes controlled prompt design difficult and can lead to unpredictable outputs, especially when trying to maintain brand consistency across merchandise designs.
+### Glass Box Achievement
+In the **Agent Glass Box Track**, the challenge was to “follow the trajectory, understand the behavior.” Our solution captured every critical stage of generation: safety gating, structured prompt expansion, progressive latent decoding, cross-attention influence visualization, and keyword ablation. The judging emphasized transparency, auditability, and actionable interpretability. We placed **3rd** by demonstrating:
+1. Reproducible, instrumented diffusion runs with timestep decoding.
+2. Empirical word impact measurement via automated ablation.
+3. Layered safety enforcement (keywords → LLM policy → schema validation).
+4. Human-readable dashboards aligning system state, visual evidence, and reasoning.
+
+---
 
 ## 🚀 Quick Start
 
@@ -61,6 +75,13 @@ Our agent tackles this by combining an LLM agent with visual explainability tool
   - Actionable improvement recommendations
 
 ## 📁 Project Structure
+## 🖼️ Hackathon Poster
+<div align="center">
+  <img src="assets/hackathon_poster.png" alt="Great Agent Hack 2025 Poster" width="820" />
+  <p><em>Official project poster summarizing workflow, diffusion transparency pipeline, safety layers, and showcase results.</em></p>
+</div>
+
+---
 
 ```
 Explainable-AI/
@@ -355,7 +376,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Team
 **Arun Josephraj, Chenyi Huang, Victor Hu**
 
-Project developed during the Great Agent Hack 2025 hackathon.
+Project developed during the Great Agent Hack 2025 hackathon. Awarded **🥉 3rd Place in the Agent Glass Box Track** for advancing diffusion transparency.
 
 ## 📧 Contact
 
