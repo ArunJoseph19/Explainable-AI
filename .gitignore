@@ -62,6 +62,8 @@ outputs/*/
 *.jpeg
 *.gif
 *.webp
+!assets/logo_christmas.png
+!assets/hackathon_poster.png
 
 # Temporary Files
 temp/
